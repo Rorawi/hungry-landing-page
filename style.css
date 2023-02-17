@@ -56,6 +56,7 @@ nav {
     font-size: 1.5rem;
     color: green;
     font-family: 'Henny Penny', cursive;
+    cursor: pointer;
 }
 
 ul {
@@ -83,10 +84,15 @@ a {
     background-color: #000;
     display: inline-block;
     position: absolute;
-    top: 50px;
+    top: 51px;
     width: 0%;
-    transition: .3s;
+    transition: .7s ease;
 }
+
+a::before:last-child {
+    width: 0;
+}
+
 
  a:hover::before {
     width: 100%;
@@ -102,6 +108,10 @@ a {
     cursor: pointer;
 }
 
+#search:hover,#moon:hover {
+    opacity: .8;
+}
+
 #hear {
     z-index: 1;
     position: relative;
@@ -112,13 +122,25 @@ a {
     border-radius: 50%;
     width: 30px;
     box-shadow: 5px 5px 5px rgba(71, 70, 70, 0.612);
+}
 
+#hear:hover {
+    transition: .3s;
+    scale: 1.1;
+}
+
+.order-btn {
+    margin: -5px 0 0;
+    padding: 7px 31px;
+    border-radius: 23px;
+    border: 0;
+    background-color: rgb(24, 24, 24);
+    color: #fff;
+    font-size: .95rem;
+    cursor: pointer;
 }
 
 
-a::before:hover {
-    width: 100%;
-} 
 
 section {
     margin: 5px 0;
@@ -188,6 +210,11 @@ section article:nth-child(2) {
 
 .socials img {
     margin: 0 0 20px  0;
+}
+
+.socials img:hover {
+    transition: .3s;
+    scale: 1.2;
 }
 
 
@@ -326,7 +353,8 @@ body.active {
     }
 
     .menu-btn.active {
-        visibility: hidden;
+        background-repeat: no-repeat;
+        background-image: url(./images/close1.png);
     }
 
 

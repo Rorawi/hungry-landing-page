@@ -13,13 +13,10 @@ switchMode.addEventListener('click',()=> {
 
 
 
-// Get the menu button and navbar links
 const menuBtn = document.querySelector(".menu-btn")
 const navbarLinks = document.getElementById("navbar-links");
 
-// Add click event listener to the menu button
 menuBtn.addEventListener("click", () => {
-    console.log('hndsdj');
-  // Toggle the active class on the navbar links
+  menuBtn.classList.toggle("active")
   navbarLinks.classList.toggle("active");
 });
