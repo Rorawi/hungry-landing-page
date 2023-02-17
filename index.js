@@ -2,24 +2,24 @@ const switchMode = document.querySelector("#moon")
 const Body = document.querySelector("body")
 const mainContent = document.querySelector(".main-content")
 
-const menu = document.querySelector(".menu-btn")
-const ul = document.querySelector('ul')
+
 
 console.log(switchMode,mainContent);
 
 switchMode.addEventListener('click',()=> {
-    // alert("It worked !!")
-    // if (switchMode.endsWith("moon.png")) {
-    //     switchMode.src = "./images/sun.png";
-    //   } else {
-    //     switchMode.src = "./images/moon.png";
-    //   }
     mainContent.classList.toggle('active')
     Body.classList.toggle('active')
 })
 
-menu.addEventListener('click',()=> {
-    menu.classList.toggle('active')
- ul.classList.toggle('active')
-})
 
+
+// Get the menu button and navbar links
+const menuBtn = document.querySelector(".menu-btn")
+const navbarLinks = document.getElementById("navbar-links");
+
+// Add click event listener to the menu button
+menuBtn.addEventListener("click", () => {
+    console.log('hndsdj');
+  // Toggle the active class on the navbar links
+  navbarLinks.classList.toggle("active");
+});
