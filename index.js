@@ -1,4 +1,4 @@
-const switchMode = document.querySelector("#moon")
+const switchMode = document.querySelector(".moon-btn")
 const Body = document.querySelector("body")
 const mainContent = document.querySelector(".main-content")
 
@@ -7,6 +7,7 @@ const mainContent = document.querySelector(".main-content")
 console.log(switchMode,mainContent);
 
 switchMode.addEventListener('click',()=> {
+  switchMode.classList.toggle("active")
     mainContent.classList.toggle('active')
     Body.classList.toggle('active')
 })

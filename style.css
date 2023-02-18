@@ -98,25 +98,39 @@ a::before:last-child {
     width: 100%;
 }
 
-#search,#hear,#moon {
+#search,#hear {
     background: transparent;
     border: 0;
 }
 
-#search img, #hear img,#moon img {
+.moon-btn {
+    background-repeat: no-repeat;
+    background-image: url(./images/moon.png);
+    cursor: pointer;
+    background-size: 20px;
+    width: 20px;
+    z-index: 1;
+}
+
+.moon-btn.active {
+    background-image: url(./images/sun.png);
+    transition: .5s;
+}
+
+#search img, #hear img {
     width: 25px;
     cursor: pointer;
 }
 
-#search:hover,#moon:hover {
+#search:hover,.moon-btn:hover {
     opacity: .8;
 }
 
 #hear {
     z-index: 1;
     position: relative;
-    top: 2px;
-    left: 90%;
+    top: 23px;
+    left: 45%;
 
     background-color: #000000;
     border-radius: 50%;
@@ -313,8 +327,6 @@ body.active {
   
   .navbar-links li {
     margin-bottom: 20px;
-    
-    
   }
   
   .navbar-links a {
@@ -357,6 +369,19 @@ body.active {
         background-image: url(./images/close1.png);
     }
 
+
+    .moon-btn {
+        background-repeat: no-repeat;
+        background-image: url(./images/moon.png);
+        cursor: pointer;
+        width: 40px;
+        height: 5vh;
+        z-index: 1;
+    }
+
+    .moon-btn.active {
+        background-image: url(./images/sun.png);
+    }
 
     .menu-btn:hover {
         scale: 1.3;
@@ -482,15 +507,33 @@ section article:nth-child(1) p {
     box-shadow: 5px 5px 5px rgb(71 70 70 / 61%);
 }
 
+/* .moon-btn {
+    background-repeat: no-repeat;
+    background-image: url(./images/moon.png);
+    cursor: pointer;
+    background-size: 20px;
+    width: 20px;
+    z-index: 1;
+} */
+
+/* .moon-btn.active {
+    background-image: url(./images/sun.png);
+    transition: .5s;
+} */
+
 }
 
 
 
-@media screen and (max-width:375px){
+@media screen and (min-width:412px){
     section article:nth-child(1) {
         z-index: 1;
         margin: 20px 0 33px 8px;
     }
+
+    /* .main-content {
+        height: 80vh!important;
+    } */
 }
 /*
 
